@@ -1,0 +1,182 @@
+body {
+  background-color: #6eb96e;
+  position: relative;
+  margin: 15px;
+}
+.container {
+  font-family: "Satify", cursive;
+}
+
+/* brandin ja tekstin väri */
+.my-navbar .navbar-brand,
+.my-navbar .navbar-text {
+  font-family: "Caveat", cursive;
+}
+
+/* linkin väri */
+.my-navbar .navbar-nav .nav-link {
+  color: #0b0e0b;
+  font-family: "Satify", cursive;
+}
+/*Dropdown värit*/
+.nav-item .dropdown-menu a:hover {
+  background: rgba(112, 197, 104, 0.548) !important;
+  cursor: pointer;
+}
+
+/* aktiivisen & hover-linkin väri */
+.my-navbar .nav-item.active .nav-link,
+.my-navbar .nav-item:hover .nav-link {
+  color: #ffffff;
+}
+/*navikuvake*/
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(82, 253, 2)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+/*scrollspyn tyyli*/
+.nav-link.active {
+  color: white !important;
+}
+
+/*slideshown muotoilu*/
+.carousel-inner img {
+  width: 100%;
+  margin: auto;
+  min-height: 200px;
+}
+/*slideshown nuoli-ikonit*/
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%236eb96e' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%236eb96e' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+/*ravintolan muotoilut*/
+#ravintola img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 40px 0px;
+}
+
+#ravintola,
+#lounas{
+  padding-top: 60px;
+  text-align: center;
+}
+
+#accordion,
+#videot {
+  padding-top: 60px;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+.card-header {
+  background-color: rgba(52, 102, 52, 0.938);
+}
+.card-link {
+  color: #6eb96e;
+  font-weight: 900;
+}
+.card-link:hover {
+  background-color: #6eb96e;
+  font-size: larger;
+  color: black;
+}
+#accordion img {
+  width: 100%;
+  border-radius: 10px 20px;
+}
+#accordion div {
+  text-align: center !important;
+}
+
+#videot .nav-link.active {
+  color: #6eb96e !important;
+  background-color: rgba(52, 102, 52, 0.938);
+}
+#videot .nav-link {
+  color: rgba(52, 102, 52, 0.938);
+  background-color: #6eb96e;
+}
+
+.table.table-hover {
+  margin: auto;
+  margin-top: 60px;
+  background-color: cornsilk;
+}
+
+#taulukko {
+  max-width: 700px;
+  margin: auto;
+}
+
+#taulukko thead {
+  background-color: rgba(52, 102, 52, 0.938);
+  color: #6eb96e;
+}
+
+#lomake{
+  padding-top: 30px;
+  text-align: center;
+  background-color: rgba(52, 102, 52);
+  border-radius: 5px;
+  color:white;
+ }
+ 
+ .custom-input{
+   display: flex;
+   text-align: right;
+   justify-content: center;
+ }
+
+ .custom-input input{
+  background-color:  rgb(195, 233, 192);
+ }
+
+ .custom-radios{
+   text-align: left;
+ }
+
+ .custom-margin{
+   margin-top: 40px;
+ }
+
+ .custom-checkbox{
+   display: flex;
+   justify-content: center;
+   margin: 40px 0px 16px 0px;
+ }
+
+ .custom-button{
+   margin: 30px;
+ }
+
+ #tulos{
+  margin-top: 30px;
+  text-align: center;
+}
+
+/*pienillä näytöillä isompi padding/marginaali*/
+@media (max-width: 760px) {
+  #ravintola,
+  #menu,
+  #lounas,
+  #accordion,
+  #videot {
+    padding-top: 130px;
+  }
+
+  #taulukko {
+    margin-top: 130px;
+  }
+
+  .custom-input{
+    text-align: left;
+  }
+
+  .custom-checkbox{
+    justify-content: left;
+  }
+}

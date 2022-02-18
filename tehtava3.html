@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Salados</title>
+    <!--Bootstrapin CSS-->
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!--googlefontit-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!--Popper eli popupjutut-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!--Bootstrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <!--navigaatiopalkki-->
+    <nav
+      class="navbar navbar-expand-md navbar-dark my-navbar fixed-top"
+      style="background-color: rgba(52, 102, 52, 0.938)"
+    >
+      <a class="navbar-brand" href="#alku">
+        <img
+          src="http://myy.haaga-helia.fi/~jaami/ravintolakuvat/logo.png"
+          alt="logo"
+          width="50"
+        />
+        Ravintola Salados</a
+      >
+
+      <!--mobiilinavigointi-->
+      <button
+        class="navbar-toggler custom-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--Navigaation valinnat-->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#alku">
+              Koti<span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#ravintola">Salados</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Menu
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#lounas">Lounas</a>
+              <a class="dropdown-item" href="#accordion">Listaruoat</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#videot">Pitopalvelu</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#taulukko">Yhteystiedot</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--"kotisivu"-->
+    <div id="demo" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+        <li data-target="#demo" data-slide-to="3"></li>
+      </ul>
+
+      <!-- Slideshow -->
+      <div class="carousel-inner" id="alku">
+        <div class="carousel-item active">
+          <img
+            src="kuvat/poyta1.jpg"
+            alt="katettu pöytä"
+            width="1100"
+            height="550"
+          />
+          <div class="carousel-caption">
+            <h3>Tunnelmallinen kattaus</h3>
+            <p>Nauti rustiikkisesti tunnelmasta ravintolassamme</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="kuvat/keitto7.jpg"
+            alt="keittolounas"
+            width="1100"
+            height="550"
+          />
+          <div class="carousel-caption">
+            <h3>Keittolounaat</h3>
+            <p>Tarjoamme päivittäin myös kevyemmän vaihtoehdon lounaalla</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="kuvat/ranskikset.jpg"
+            alt="ranskalaiset perunat"
+            width="1100"
+            height="550"
+          />
+          <div class="carousel-caption">
+            <h3>Vapaavalintaiset lisukkeet</h3>
+            <p>Saat valita lista-annoksiin lisukkeesi</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="kuvat/listaruoka.jpg"
+            alt="annos listalta"
+            width="1100"
+            height="550"
+          />
+          <div class="carousel-caption">
+            <h3>Herkulliset listaruoat</h3>
+            <p>Lounaan lisäksi saatavilla myös listaruokia</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- nuolinäppäimet -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+
+    <!--Ravintola välilehti-->
+    <div class="container" id="ravintola">
+      <div class="row">
+        <div class="col-lg-4">
+          <img src="kuvat/ravintola1.jpg" alt="Ravintolan katetut pöydät" />
+        </div>
+        <div class="col-lg-4">
+          <h1>Ravintola Salados</h1>
+          <p>
+            Tarjoamme arkisin kotilounasta seisovasta pöydästä, voit valita myös
+            kevyemmän keittolounaan. Lounasajan ulkopuolella voit tilata
+            annoksia listaltamme.
+          </p>
+
+          <p>
+            Avoinna:<br />
+            ma-pe 10:30-21:00<br />
+            la 11:00-22:30<br />
+            su 12-19
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <img src="kuvat/suolainen2.jpg" alt="tapas" />
+        </div>
+      </div>
+    </div>
+
+    <!--menu eli kortit-->
+    <div class="card-deck" id="lounas">
+      <div class="card">
+        <img
+          src="kuvat/lounaskeitto.jpg"
+          class="card-img-top"
+          alt="Keittolounaan annos"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Keittolounaat</h5>
+          <p class="card-text">
+            Tarjoilemme lounasaikaan aina myös keittolounaan seisovasta
+            pöydästä. Keittolounaaseen kuuluu päivän keitto, salaattipöytä ja
+            kahvi
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="kuvat/lounasseisova.jpg"
+          class="card-img-top"
+          alt="Siesovan pöydän lounasannos"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Seisova pöytä</h5>
+          <p class="card-text">
+            Perinteinen lounaamme koostuu seisovan pöydän antimista, jossa on
+            aina tarjolla päivän keittoa, päivän liharuoka sekä päivän
+            kasvisruoka. Lounaan lisäksi hintaan kuuluu salaattipöytä sekä kahvi
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="kuvat/lounaslistalta.jpg"
+          class="card-img-top"
+          alt="Lounasannos listalta"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Lounasannokset</h5>
+          <p class="card-text">
+            Seisovan pöydän lisäksi voit tilata meiltä annoslounaan
+            lounaslistaltamme. Listaruokaan kuuluu ruoka-annoksen lisäksi
+            salaattipöytä sekä kahvi.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="kuvat/lounasjuoma.jpg"
+          class="card-img-top"
+          alt="Juomat lounaalla"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Lounaalla tarjottavat juomat</h5>
+          <p class="card-text">
+            Kaikkiin ruokiimme kuuluu veloituksetta vesi, tämän lisäksi seisovan
+            pöydän lounaaseen kuuluu myös kotikalja, maito sekä mineraalivesi.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--Lista-annokset eli accordion-->
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header">
+          <a class="card-link" data-toggle="collapse" href="#collapseOne">
+            Alkuruoat
+          </a>
+        </div>
+        <div id="collapseOne" class="collapse show" data-parent="#accordion">
+          <div class="card-body">
+            <div class="d-flex justify-content-center">
+              <div class="p-2 flex-fill">
+                <img src="kuvat/alkuruoka.jpg" alt="Juustolautanen" />
+              </div>
+              <div class="p-2 flex-fill">
+                <p>
+                  Alkuruokamme löydät listalta, kysy myös jaettavia
+                  alkuruokalautasia, jonka voit jakaa ruokaseurueesi kanssa.
+                </p>
+              </div>
+              <div class="p-2 flex-fill">
+                <img src="kuvat/suolainen3.jpg" alt="Salamipötköjä" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <a
+            class="collapsed card-link"
+            data-toggle="collapse"
+            href="#collapseTwo"
+          >
+            Pääruoat
+          </a>
+        </div>
+        <div id="collapseTwo" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            <div class="d-flex justify-content-center">
+              <div class="p-2 flex-fill">
+                <img src="kuvat/paaruoka.jpg" alt="Pannupizza" />
+              </div>
+              <div class="p-2 flex-fill">
+                <p>
+                  Pääruokamme valmistetaan paikallisista aineksista. Listalta
+                  löydät niin keitot kuin pizzatkin.
+                </p>
+              </div>
+              <div class="p-2 flex-fill">
+                <img src="kuvat/annos18.jpg" alt="Ravintola-annos" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <a
+            class="collapsed card-link"
+            data-toggle="collapse"
+            href="#collapseThree"
+          >
+            Jälkiruoat
+          </a>
+        </div>
+        <div id="collapseThree" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            <div class="d-flex justify-content-center">
+              <div class="p-2 flex-fill">
+                <img src="kuvat/jalkiruoka.jpg" alt="Juustokakku" />
+              </div>
+              <div class="p-2 flex-fill">
+                <p>
+                  Täydellisen aterian kruunaa jälkiruoka. Listaltamme löytyy
+                  omaa tekemäämme gelatoa, erilaisia suklaisia leivoksia sekä
+                  juustokakkuja.
+                </p>
+              </div>
+              <div class="p-2 flex-fill">
+                <img src="kuvat/jade1.jpg" alt="Jäätelöannos" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Videot eli Nav tabs -->
+    <ul class="nav nav-tabs" id="videot">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#home">Video 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#menu1">Video 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#menu2">Video 3</a>
+      </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Video 1 -->
+      <div class="tab-pane active container" id="home">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe
+            class="embed-responsive-item"
+            src="https://www.youtube.com/embed/T40LsZa6s-Y"
+          ></iframe>
+        </div>
+      </div>
+      <!--Video 2-->
+      <div class="tab-pane container" id="menu1">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe
+            class="embed-responsive-item"
+            src="https://www.youtube.com/embed/FZTVS-dPc_0"
+          ></iframe>
+        </div>
+      </div>
+      <!-- Video 3 -->
+      <div class="tab-pane container" id="menu2">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe
+            class="embed-responsive-item"
+            src="https://www.youtube.com/embed/WLhOe4IHNbQ"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!--Yhteystiedot eli taulukko-->
+    <div class="table-responsive" style="margin-bottom: 30px;" id="taulukko">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Rooli</th>
+            <th>Etunimi</th>
+            <th>Sukunimi</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Toimitusjohtaja</td>
+            <td>John</td>
+            <td>Doe</td>
+            <td>john@example.com</td>
+          </tr>
+          <tr>
+            <td>Laskutus</td>
+            <td>Mary</td>
+            <td>Moe</td>
+            <td>mary@example.com</td>
+          </tr>
+          <tr>
+            <td>Asiakaspalvelu</td>
+            <td>July</td>
+            <td>Dooley</td>
+            <td>july@example.com</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!--Lomake-->
+  <div id="lomake">
+    <h2>Palautelomake</h2>
+    <br>
+    <p>Onnistuimmeko yli odotustesi tai tuliko paha mieli? Kerro meille mitä mieltä olit Saladosista!</p>
+    <form onsubmit="return false">
+        <!--Nimi, sposti ja puhelinnumero-->
+        <div class="form-group row custom-input custom-margin">
+            <label class="col-sm-2 col-form-label" for="nimi">Nimi: </label>
+            <div class="col-sm-5">
+            <input type="text" class="form-control" id="nimi" placeholder="Eetu Esimerkki" required>
+          </div>
+        </div>
+        <div class="form-group row custom-input">
+          <label class="col-sm-2 col-form-label" for="sposti">Sähköposti: </label>
+          <div class="col-sm-5">
+          <input type="email" class="form-control" id="sposti" placeholder="posti@posti.net" required>
+        </div>
+        </div>
+        <div class="form-group row custom-input">
+          <label class="col-sm-2 col-form-label" for="puhnro">Puhelinnumero: </label>
+          <div class="col-sm-5">
+          <input type="tel" class="form-control" id="puhnro" placeholder="040-1234567" pattern="\+?[0-9 () \-]+">
+        </div>
+        </div>  
+
+        <!--Miksi olit saladosissa-->
+        <fieldset class="form-group custom-margin" style="border: black 1 solid;">
+            <div class="row custom-input">
+              <legend class="col-form-label col-sm-2 pt-0">Olin Saladosissa...</legend>
+              <div class="col-sm-2 custom-radios">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="syy" id="1" value="lounaalla">
+                  <label class="form-check-label" for="1">
+                    Lounaalla
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="syy" id="2" value="päivällisellä">
+                  <label class="form-check-label" for="2">
+                    Päivällisellä
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="syy" id="3" value="istumassa iltaa">
+                  <label class="form-check-label" for="3">
+                    Istumassa iltaa
+                  </label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <!--Palautteen aihe-->
+    <fieldset class="form-group row custom-margin custom-checkbox">
+        <div class="row">
+            <legend class="col-form-label col-sm-7 pt-0">Palautteeni koskee: </legend>
+        <div class="col-sm-5">
+          <div class="form-check custom-radios">
+            <input class="form-check-input" type="checkbox" id="ruoka" name="aihe" value="Ruokaa">
+            <label class="form-check-label" for="ruoka">
+              Ruokaa
+            </label>
+        </div>
+          <div class="form-check custom-radios">
+            <input class="form-check-input" type="checkbox" id="juoma" name="aihe" value="Juomaa">
+            <label class="form-check-label" for="juoma">
+              Juomaa
+            </label>
+          </div>
+          <div class="form-check custom-radios">
+            <input class="form-check-input" type="checkbox" id="palvelu" name="aihe" value="Palvelua">
+            <label class="form-check-label" for="palvelu">
+              Palvelua
+            </label>
+          </div>
+          <div class="form-check custom-radios">
+            <input class="form-check-input" type="checkbox" id="siisteys" name="aihe" value="Ravintolan siisteyttä">
+            <label class="form-check-label" for="siisteys">
+              Ravintolan siisteyttä
+            </label>
+          </div>
+        </div>
+    </div>
+    </fieldset>
+
+      <!--Itse palaute-->
+        <div class="form-group row custom-margin custom-input">
+        <label for="palaute" class="col-sm-2 col-form-label">Kerro palautteesi: </label>
+        <div class="col-sm-6">
+          <textarea class="form-control" id="palaute" name = "teksti" rows="5">Mielestäni </textarea>
+        </div>
+      </div>
+
+      <!--löytyikö mitä etsi-->
+      <div class="form-group row custom-margin custom-input">
+        <label for="loytyi" class="col-sm-2 col-form-label">Löysitkö etsimäsi? </label>
+        <div class="col-sm-2">
+        <select id="loytyi" name="loytyi" class="form-control">
+          <option value="helposti">Helposti</option>
+          <option value="jotakuinkin">Jotakuinkin</option>
+          <option value="hiukan vaikeasti">Hiukan vaikeasti</option>
+          <option value="vaikeasti">Vaikeasti</option>
+          <option value="en loytanyt">En löytänyt</option>
+        </select>
+      </div>
+    </div>
+
+      <!--lähetä ja resetoi-->
+      <button type="submit" class="btn btn-dark custom-button" onclick="laheta()">Lähetä</button>
+      <button type="reset" class="btn btn-dark custom-button">Tyhjennä</button>
+    </form>
+  </div>
+
+  <!--tänne näyttötulostus-->
+  <div id="tulos"> </div>
+
+  <!--tulostuksen funktio-->
+    <script>
+      function laheta() {
+        var nimi = document.getElementById("nimi").value;
+        var email = document.getElementById("sposti").value;
+        var puhnro = document.getElementById("puhnro").value;
+        var hei = "Hei ";
+
+        var valinta = "Olit Saladosissa ";
+        var radios = document.getElementsByName("syy");
+        for (var i = 0, length = radios.length; i < length; i++){
+          if (radios[i].checked){
+            valinta = valinta + radios[i].value;
+            break;
+          }
+        }
+
+        var aihe = "Palautteesi koskee aihetta: ";
+        var boxit = document.getElementsByName("aihe");
+        for (var i = 0, length = boxit.length; i < length; i++){
+          if (boxit[i].checked){
+            aihe = aihe + boxit[i].value + " ";
+          }
+        }
+
+        var loysit = "Kerroit, että löysit etsimäsi: ";
+        var x = document.getElementById("loytyi").selectedIndex;
+        var y = document.getElementById("loytyi").options;
+        loysit = loysit + y[x].text;
+
+        var vapaaSana = document.getElementById("palaute").value;
+
+        document.getElementById("tulos").innerHTML = hei + nimi + ". Palautteesi on vastaanotettu alla olevin tiedoin:<br>" +
+        "Sähköpostiosoitteesi: " + email + "<br>Puhelinnumerosi: " + puhnro +
+        "<br>" + valinta + 
+        "<br>" + aihe + 
+        "<br>" + loysit + 
+        "<br>Palautteesi: " + vapaaSana;
+      }
+    </script>
+  </body>
+</html>
